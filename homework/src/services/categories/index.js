@@ -1,13 +1,5 @@
 import express from "express";
-import {
-  Product,
-  Review,
-  Category,
-  ArticleCategory,
-  User,
-} from "./models/index.js";
-import { Op } from "sequelize";
-import { noExtendLeft } from "sequelize/types/lib/operators";
+import Category  from "../../db/models/index.js";
 
 const categoryRouter = express.Router();
 
@@ -59,3 +51,5 @@ categoryRouter
       next(error);
     }
   });
+
+export default categoryRouter;
