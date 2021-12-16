@@ -3,6 +3,7 @@ import Review from "./Review.js";
 import Category from "./Category.js";
 import ArticleCategory from "./ArticleCategory.js";
 import User from "./User.js";
+
 //Product and Review as one to many relationship
 Product.hasMany(Review, { onDelete: "CASCADE" });
 Review.belongsTo(Product, { onDelete: "CASCADE" });
